@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/downloads.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c69650964.js" crossorigin="anonymous"></script>
+    <title>ShareLoad</title>
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <%- include('../partials/navbar') %>
+    <!-- navbar end -->
+
+    <div class="container-fluid main-body-container">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto ">
+                <div class="row ">
+                    <div class="col-md-8 col-12 main-body-conatiner-left-right left-main-body mx-auto">
+
+                        <div class="container-fluid outer-left" id="dropZone">
+                            <div class="inner-left" id="innerDiv">
+                                <i class="fas fa-download download-icon"></i>
+                                <% if (locals.error){%>
+                                <p class="main-heading"> <%= locals.error %> </p>
+                                <p class="main-heading">Sorry !! <i class="fas fa-frown"></i></p>
+                                <% } else {%>
+                                
+                                    <p class="main-heading">
+                                        Download Your File Now!
+                                    </p>
+                                    <p class="main-heading-inner2">Link expires in 24 hrs</p>
+                                    <div class="download-link-div">
+                                        <p class="download-link"><%= fileName %> </p>
+                                        <a href="<%= downloadLink %>" class="download-link-btn">Download Now</a>
+
+                                    </div>
+                                <%} %>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- main body start -->
+
+
+    <!-- main body end -->
+
+    <!-- email container start -->
+
+
+
+    <!-- email container end -->
+
+
+    {{!--
+    <script src="js/index.js"></script> --}}
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

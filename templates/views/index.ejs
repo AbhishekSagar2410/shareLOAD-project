@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c69650964.js" crossorigin="anonymous"></script>
+    <title>ShareLoad</title>
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <div class="container-fluid nav-container">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand shareload-text" href="/">ShareLOAD</a>
+
+                        <div class="rate-us-div">
+                            <button class="btn btn-outline-success rate-us-text-button">Rate Us</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar end -->
+
+    <h2 class="text-center">Upload & Share </h2>
+    <!-- main body start -->
+
+    <div class="container-fluid main-body-container">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto ">
+                <div class="row ">
+                    <div class="col-md-6 col-12 main-body-conatiner-left-right left-main-body mx-auto">
+                        <div class="container-fluid outer-left" id="dropZone">
+                            <div class="inner-left" id="innerDiv">
+                                <div class="file-photo-div">
+                                    <img src="images/filephoto.svg" class="file-photo center-file-photo" alt="">
+                                    <img src="images/filephoto.svg" class="file-photo left-file-photo" alt="">
+                                    <img src="images/filephoto.svg" class="file-photo right-file-photo" alt="">
+                                </div>
+                                <input type="file" id="fileInput">
+                                <p class="file-photo-text">Drop your File here or, <span id="browseBtn">Browse</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-12 main-body-conatiner-left-right right-main-body mx-auto">
+                        <div class="container-fluid outer-right">
+                            <div class="inner-right row">
+                                <div class="rowContent expireDiv text-center">
+                                    Link expires in 24hrs
+                                </div>
+                                <div class="rowContent progressContainer">
+                                    <div class="progessBar text-center">
+                                        <span class="percentageText">Uplaoding. . .<span class="percentageNum">
+                                                100%
+                                    </div>
+
+                                </div>
+                                <div class="rowContent getLink">
+                                    <div class="getLinkText">
+                                        Get Link :
+                                    </div>
+                                    <input class="link-excess-text" readonly id="fileURL"
+                                        value="https://www.youtube.com/watch?v=CwnViYV4gM0&t=5773s">
+                                    </input>
+                                    <i class="fas fa-copy" id="copyIcon">
+
+                                    </i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main body end -->
+
+    <!-- email container start -->
+    <div class="container-fluid nav-container">
+        <div class="row ">
+            <div class="col-md-11 col-12 mx-auto">
+
+                <form action="" class="row" id="emailForm">
+
+
+                    <div class="col-md-4 col-12 same-email sender-email">
+                        <div class=" same-email-inner">
+                            <div class=" same-email-name">Your Email :
+                            </div>
+                            <input type="email" name="senderEmail" required class="email-excess-text">
+
+                            </input>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-12 img-email">
+                        <img src="images/gmail.jpg" class="img-fluid gmail-photo" alt="...">
+
+                    </div>
+
+                    <div class="col-md-4 col-12 same-email receiver-email ">
+                        <div class="same-email-inner">
+                            <div class="same-email-name">Receiver's Email :
+                            </div>
+                            <input type="email" name="receiverEmail" required class="email-excess-text">
+                            </input>
+                        </div>
+                        <button type="submit" class="btn send-email-btn">Send <i
+                                class="fas fa-paper-plane"></i></button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- email container end -->
+
+
+    <script src="js/index.js"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+/* default */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'DM Serif Display', serif; */
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+:root{
+    --main-bg:#3c3547;
+    --main-color:white;
+
+}
+html
+{
+    font-size: 62.5%;
+}
+
+
+/* navebar start */
+.rate-us-div{
+    display: inline-block;
+    width: 10rem;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+
+
+
+.nav-container{
+    /* background: #e9d7d7; */
+    margin: 2rem 0rem 0rem 0rem;
+    font-size: 1.7rem;
+}
+
+.shareload-text{
+    font-family: 'Kaushan Script', cursive;
+    
+}
+
+.rate-us-text-button{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #bcbcbc;
+    border: none;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* navbar end */
+/* main body start */
+
+.main-body-container::before{
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+background:url(../images/bodybackground1.jpg) no-repeat center center/cover;
+height: 100%;
+width: 100%;
+z-index: -1;
+opacity: 0.5;
+}
+
+.main-body-conatiner-left-right{
+    height: 36rem;
+    /* border: 1px solid black; */
+    /* width: 60rem; */
+    margin: 7rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+.outer-left,.outer-right{
+    background-color: #f9f9f9;
+    height:30rem;
+    width: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.inner-left,.inner-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #96dafb;
+    height: 25rem;
+    width: 75rem;
+    /* border: dashed #c1c1c1; */
+    box-shadow: 0.5rem 0.5rem 0.5rem #ddbebe;
+}
+
+
+
+
+/* main body end */
+
+
+/* download-container start*/
+
+
+.main-heading{
+    font-size: 3em;
+    color: #666;
+    font-weight: 400;
+}
+
+.main-heading-inner1{
+    font-size: 1.5em;
+    color: #666;
+    font-weight: 400;
+    
+}
+
+.main-heading-inner2{
+    font-size: 1.8em;
+    color: #666;
+    font-weight: 400;
+    margin: 1rem 0rem -0.5rem 0rem;
+
+}
+
+.download-icon{
+    font-size: 6rem;
+    opacity: 0.4;
+    color: #313970;
+}
+
+.download-link-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 6rem;
+}
+.download-link{
+    display: inline-block;
+    width: 30rem;
+    border: 1px dashed;
+    margin: 0rem 1rem 0rem 0rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #666;
+    font-weight: 400;
+    line-height: 4rem;
+    background-color: white;
+    font-family: 'Crimson Text', serif;
+}
+
+
+.download-link-btn{
+    
+    padding: 0.8em 1.2em;
+    border-radius: 0.3rem;
+    background-color: #2555FF;
+    color: #fff;
+    border: 1px solid #2555FF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    height: 4rem;
+    text-align: center;
+    
+}
+
+.download-link-btn:hover{
+    color: white;
+    background-color: #002cd1
+}
+/* download-container end*/
+
+
+
+/* responsive */
+
+@media(max-width:768px)
+{
+    .main-body-container::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background:url(../images/bodybackground1.jpg) repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        }
+
+
+        /*email container  */
+        .img-email{
+            text-align: center;
+            width: 10rem;
+            order: -1;
+            margin: auto;
+            }
+
+            .receiver-email{
+                display: flex;
+                width: 45rem;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+
+            .sender-email {
+                margin-left: 0rem;
+            }
+
+            /* .email-main-container{
+
+            } */
+
+
+            /*download conatiner*/
+            .outer-left, .outer-right {
+                background-color: #f9f9f9;
+                height: 45rem;
+                width: 35rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .inner-left, .inner-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #96dafb;
+                height: 40rem;
+                width: 30rem;
+                /* border: dashed #c1c1c1; */
+                box-shadow: 0.5rem 0.5rem 0.5rem #ddbebe;
+            }
+
+            .download-icon{
+                font-size: 6rem;
+                opacity: 0.4;
+                color: #313970;
+            }
+
+            .main-heading {
+                text-align: center;
+                font-size: 2.3rem;
+                color: #666;
+                font-weight: 400;
+            }
+
+            .main-heading-inner2 {
+                font-size: 1.8em;
+                color: #666;
+                font-weight: 400;
+                margin: 2rem 0rem -2.5rem 0rem;
+            }
+
+            .download-link-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 25rem;
+                height: 15rem;
+            }
+
+            .download-link {
+                display: inline-block;
+                width: 25rem;
+                border: 1px dashed;
+                margin: 0rem 1rem 0rem 0rem;
+                height: 4rem;
+                text-align: center;
+                font-size: 2rem;
+                color: #666;
+                font-weight: 400;
+                line-height: 4rem;
+                background-color: white;
+                font-family: 'Crimson Text', serif;
+            }
+
+            .download-link-btn {
+                padding: 0.8em 1.2em;
+                border-radius: 0.3rem;
+                background-color: #2555FF;
+                color: #fff;
+                border: 1px solid #2555FF;
+                font-size: 1.2rem;
+                cursor: pointer;
+                text-decoration: none;
+                height: 4rem;
+                text-align: center;
+                margin: 1rem 0rem 0rem 0rem;
+                
+            }
+
+
+}

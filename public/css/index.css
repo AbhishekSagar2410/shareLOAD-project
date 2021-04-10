@@ -1,0 +1,373 @@
+/* default */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'DM Serif Display', serif; */
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+:root{
+    --main-bg:#3c3547;
+    --main-color:white;
+
+}
+html
+{
+    font-size: 62.5%;
+}
+
+
+/* navebar start */
+.rate-us-div{
+    display: inline-block;
+    width: 10rem;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+
+
+
+.nav-container{
+    /* background: #e9d7d7; */
+    margin: 2rem 0rem 0rem 0rem;
+    font-size: 1.7rem;
+}
+
+.shareload-text{
+    font-family: 'Kaushan Script', cursive;
+    
+}
+
+.rate-us-text-button{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #bcbcbc;
+    border: none;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* navbar end */
+/* main body start */
+
+.main-body-container::before{
+content: "";
+position: absolute;
+left: 0;
+top: 0;
+background:url(../images/bodybackground1.jpg) no-repeat center center/cover;
+height: 100%;
+width: 100%;
+z-index: -1;
+opacity: 0.5;
+}
+
+.main-body-conatiner-left-right{
+    height: 36rem;
+    /* border: 1px solid black; */
+    width: 60rem;
+    margin: 7rem 0rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.outer-left,.outer-right{
+    background-color: #f9f9f9;
+    height: 25rem;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.inner-left,.inner-right{
+    background-color: #96dafb;
+    height: 20rem;
+    width: 45rem;
+    /* border: dashed #c1c1c1; */
+    box-shadow: 0.5rem 0.5rem 0.5rem #ddbebe;
+}
+
+.file-photo-div{
+    height: 10rem;
+    margin: 1rem;
+    position: relative;
+}
+
+.file-photo{
+    height: 10rem;
+    width: 7rem;
+    position: absolute;
+    left: 18rem;
+    transition: transform 500ms ease;
+}
+
+.dragged .right-file-photo{
+    z-index: 1;
+    transform: rotate(
+    20deg
+    ) translateX(1.5rem) scale(0.9);
+    transform-origin: bottom;
+}
+.dragged .left-file-photo{
+    z-index: 2;
+    transform: rotate(
+    -20deg
+    ) translateX(-1.5rem) scale(0.9);
+    transform-origin: bottom;
+}
+
+.center-file-photo{
+    z-index: 3;
+}
+
+
+.file-photo-text{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Mukta', sans-serif;
+}
+
+span{
+    color: white;
+    font-size: 2.2rem;
+    text-shadow: 0.5rem 0.4rem 0.8rem black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#fileInput{
+display: none;
+}
+
+/* right main container */
+
+.inner-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowContent{
+    width: 40rem;
+    height: 5rem;
+    line-height: 5rem;
+    margin: 0rem;
+    padding: 0rem;
+    border-radius: 1rem;
+    background-color: #eeeffe;
+    
+}
+
+.progessBar{
+    background-color: green;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transition: width 0.35s linear;
+}
+
+.percentageText{
+    font-size: 1.3rem;
+    cursor: default;
+    display: inline-block;
+    width: 16rem;
+}
+
+.expireDiv{
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background-color: #96dafb;
+    margin-bottom: -4rem;
+    opacity: 1.2;
+    
+}
+
+.getLinkText{
+    height: 5rem;
+    font-size: 1.5rem;
+    background-color: bisque;
+    display: inline-block;
+    width: 8rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* main body end */
+
+
+/* email start */
+
+
+
+.sender-email{
+    margin-left: 14rem;
+
+}
+
+.receiver-email{
+    width: 60rem;
+    
+}
+
+
+.img-email{
+text-align: center;
+width: 10rem;
+margin-right: 0.5rem;
+}
+
+.gmail-photo{
+    height: 5rem;
+    
+}
+
+.same-email-inner{
+    display: inline-block;
+    width: 45rem;
+    height: 4.3rem;
+    line-height: 4rem;
+    margin: 0rem;
+    padding: 0rem;
+    border-radius: 1rem;
+    background-color: #eeeffe;
+
+}
+
+.same-email-name{
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: #96dafb;
+    display: inline-block;
+    width: 13rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: 600;
+    margin-left: 0.1rem;
+
+}
+
+.send-email-btn{
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    background-color: #017878;
+    border: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem #519ead;
+    color: white;
+    cursor: pointer;
+}
+
+.send-email-btn:hover{
+    color: white;
+    font-size: 1.4rem;
+    background-color: #29889b;
+}
+
+/* excess link */
+.link-excess-text{
+    margin-left: 0.5rem;
+    width: 26rem;
+    height: 4rem;
+    border: none;
+    background-color: #eeeffe;
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    text-decoration: underline;
+    outline: none;
+}
+
+#copyIcon{
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: cornflowerblue;
+    
+}
+
+#copyIcon:hover{
+    font-size: 2.2rem;
+}
+
+.email-excess-text{
+    margin-left: 0.5rem;
+    width: 26rem;
+    height: 3rem;
+    border: none;
+    border-bottom: 0.2rem ridge;
+    background-color: #eeeffe;
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    outline: none;
+}
+
+#emailForm{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* email end  */
+
+
+/* responsive */
+
+@media(max-width:768px)
+{
+    .main-body-container::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background:url(../images/bodybackground1.jpg) repeat center center/cover;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        }
+
+
+        /*email container  */
+        .img-email{
+            text-align: center;
+            width: 10rem;
+            order: -1;
+            margin: auto;
+            }
+
+            .receiver-email{
+                display: flex;
+                width: 45rem;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+
+            .sender-email {
+                margin-left: 0rem;
+            }
+
+            /* .email-main-container{
+
+            } */
+
+
+}
