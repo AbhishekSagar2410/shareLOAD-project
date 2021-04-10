@@ -21,14 +21,16 @@ router.post('/', (req, res) => {
       }
 
       const getfile=req.file;
-      console.log(getfile);
+     
         const file = new Shareloadcollection({
             filename: getfile.filename,
             uuid: uuidv4(),
-            path: path.join(__dirname, `../uploads/${getfile.filenam}`,),
+            // path: path.join(__dirname, `../uploads/${getfile.filename}`,),
+            path: `../uploads/${getfile.filename}`,
             size: getfile.size
         });
         const response = await file.save();
+        console.log({file});
         res.json({ file: `${process.env.APP_BASE_URL}/${response.uuid}` });
       });
 });
