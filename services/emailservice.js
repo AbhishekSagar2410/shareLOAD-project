@@ -1,6 +1,5 @@
 const nodemailer=require('nodemailer')
 async function sendEmail({emailTo, emailFrom, subject, text ,html}){
-    console.log(emailTo, emailFrom);
     const transporter = nodemailer.createTransport({
         service: process.env.SMTP_HOST,
         // port: 587,

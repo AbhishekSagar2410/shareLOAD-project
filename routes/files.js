@@ -19,11 +19,14 @@ router.post('/', (req, res) => {
       if (err) {
         return res.status(500).send({ error: err.message });
       }
+
+      const getfile=req.file;
+      console.log(getfile);
         const file = new Shareloadcollection({
-            filename: req.file.filename,
+            filename: getfile.filename,
             uuid: uuidv4(),
-            path: path.join(__dirname, '../uploads/',req.file.filename),
-            size: req.file.size
+            path: getfile.path,
+            size: getfile.size
         });
         const response = await file.save();
         res.json({ file: `${process.env.APP_BASE_URL}/${response.uuid}` });
