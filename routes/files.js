@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
         const file = new Shareloadcollection({
             filename: req.file.filename,
             uuid: uuidv4(),
-            path: req.file.path,
+            path: path.join(__dirname, '../uploads/',req.file.filename),
             size: req.file.size
         });
         const response = await file.save();
