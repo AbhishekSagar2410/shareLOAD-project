@@ -34,6 +34,9 @@ mongoose.connect(process.env.MONGO_CONNECT_URL, {
 //Routes file
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+  return res.render('index');
+})
 app.use('/api/files',require('../routes/files'));
 app.use('' , require('../routes/show'))
 app.use('/downloads' , require('../routes/downloadsRouteFile'))
