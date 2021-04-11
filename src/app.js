@@ -6,6 +6,7 @@ dotenv.config({path:'../private.env'})
 const path = require('path');
 const PORT= process.env.PORT || 5500;
 var hbs = require('hbs') ;
+const { nextTick } = require('process');
 
 
 //paths
@@ -34,6 +35,13 @@ mongoose.connect(process.env.MONGO_CONNECT_URL, {
 
   //Routes file
 app.use(express.json());
+
+
+app.use(function(req,res,next){
+  res.header("Access-Control-Allow-Origin" , "*");
+  res.header("Access-Control-Allow-Headers", "Origin , X-Requested-With, Content-Type,Accept");
+  next();
+})
 
 app.get('',(req,res)=>{
   return res.render('index');
