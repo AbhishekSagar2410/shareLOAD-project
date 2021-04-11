@@ -31,10 +31,11 @@ mongoose.connect(process.env.MONGO_CONNECT_URL, {
   app.set('view engine' , 'ejs')
   app.set('views', templateViewsPath);
 
-//Routes file
+
+  //Routes file
 app.use(express.json());
 
-app.get('/',(req,res)=>{
+app.get('',(req,res)=>{
   return res.render('index');
 })
 app.use('/api/files',require('../routes/files'));
