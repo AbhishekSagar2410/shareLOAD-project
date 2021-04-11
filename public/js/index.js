@@ -6,7 +6,9 @@ let dropZone = document.getElementById('dropZone');
 let innerDiv = document.getElementById('innerDiv');
 let browseBtn = document.getElementById('browseBtn');
 
-// let uploadURL=;
+
+let host= "https://shareload-project.herokuapp.com";
+let uploadURL= `${host}/api/files`;
 // let emailURL=;
 
 
@@ -32,6 +34,9 @@ function dropZoneDragleavefun(e) {
     }
 }
 
+
+
+
 //drop event listener
 
 let fileInput = document.getElementById('fileInput');
@@ -45,14 +50,37 @@ function dropZoneDropfun(e) {
     if (files.length) {
         fileInput.files = files;
         console.log(files);
-        // uploadFile();
+        uploadFile();
     }
 }
+
+
 
 fileInput.addEventListener('change', () => {
     console.log(fileInput.files[0]);
     uploadFile();
 })
+
+// upload file
+function uploadFile() {
+    const file = fileInput.files[0];
+    const formData = new FormData();
+    formData.append("myfile", file);
+
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState);
+        // if (xhr.readyState == XMLHttpRequest.DONE) {
+        //     console.log(xhr.response);
+        //      showLink(JSON.parse(xhr.response));
+        // }
+    }
+
+xhr.upload.onprogress=uploadProgressFun;
+
+    xhr.open("POST", uploadURL);
+    xhr.send(formData);
+}
 
 
 //browse file
@@ -60,26 +88,7 @@ browseBtn.addEventListener('click', () => {
     fileInput.click();
 })
 
-//upload file
-// function uploadFile() {
-//     const file = fileInput.files[0];
-//     const formData = new formData();
-//     formData.append("myfile", file);
 
-//     const xhr = new XMLHttpRequest();
-//     xhr.onreadystatechange = () => {
-//         console.log(xhr.readyState());
-//         if (xhr.readyState == XMLHttpRequest.DONE) {
-//             console.log(xhr.response);
-//              showLink(JSON.parse(xhr.response));
-//         }
-//     }
-
-// xhr.upload.onprogress=uploadProgressFun;
-
-//     xhr.open("POST", uploadURL);
-//     xhr.send(formData);
-// }
 
 //progress bar
 

@@ -4,7 +4,7 @@ const dotenv=require('dotenv');  //for environmental variables
 const mongoose = require('mongoose');
 dotenv.config({path:'../private.env'})
 const path = require('path');
-const PORT= process.env.PORT || 3000;
+const PORT= process.env.PORT || 5500;
 var hbs = require('hbs') ;
 
 
