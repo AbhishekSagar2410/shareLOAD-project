@@ -357,7 +357,7 @@ margin-right: 0.5rem;
         .main-body-conatiner-left-right {
             /* border: 1px solid black; */
             width: auto;
-            margin: 4rem 0rem 0rem 0rem;
+            margin: 4rem 0rem 4rem 0rem;
             display: flex;
             justify-content: center;
             align-items: center;

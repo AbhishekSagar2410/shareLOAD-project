@@ -5,7 +5,6 @@ const Ratecollection = require('../models/rateusmodel');
 router.get('/open' , async(req,res)=>{
     try {
         let countUser= await Ratecollection.countDocuments();
-        console.log(countUser);
 
         return res.render('form',{
             countUser:countUser
@@ -39,7 +38,7 @@ router.post('/check' ,async (req,res)=>{
 
         let response= await createUser.save();
         countUser= await Ratecollection.countDocuments();
-        console.log(countUser);
+       
         return res.json({
             startMsg: "Great ! ",
             nextMsg : "Email Registered Successfully",
