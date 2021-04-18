@@ -1,3 +1,5 @@
+
+
 /* default */
 *{
     margin: 0px;
@@ -22,40 +24,37 @@ html
     font-size: 62.5%;
 }
 
+/* center heading start*/
 
-/* navebar start */
-.rate-us-div{
+.centerheading1{
     display: inline-block;
-    width: 10rem;
-    height: 4rem;
-    line-height: 4rem;
+    margin: 1.5rem 0rem 0rem 6rem;
+    font-family: 'Catamaran', sans-serif;
+   
+    font-size: 5.5rem;
+    color: #fdfeff;
+    text-shadow: 0.4rem 0.1rem 0.5rem #665f5f;
 }
 
-
-
-
-.nav-container{
-    /* background: #e9d7d7; */
-    margin: 2rem 0rem 0rem 0rem;
-    font-size: 1.7rem;
+.centerheading2{
+    font-size: 3rem;
+    margin: 0.5rem 0rem 0rem 6rem;
 }
 
-.shareload-text{
-    font-family: 'Kaushan Script', cursive;
-    
-}
+.centerheading1span{
+    display: inline;
+    margin: 0rem;
+    color: #227bba;
+    text-shadow: none;
 
-.rate-us-text-button{
-    width: 10rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem #bcbcbc;
-    border: none;
-    font-family: 'Kaushan Script', cursive;
 }
+/* center heading end*/
 
-/* navbar end */
 /* main body start */
+
+.main-body-container{
+    margin-top: 5rem;
+}
 
 .main-body-container::before{
 content: "";
@@ -66,14 +65,14 @@ background:url(../images/bodybackground1.jpg) no-repeat center center/cover;
 height: 100%;
 width: 100%;
 z-index: -1;
-opacity: 0.5;
+/* opacity: 0.5; */
 }
 
 .main-body-conatiner-left-right{
-    height: 36rem;
+    
     /* border: 1px solid black; */
     width: 60rem;
-    margin: 7rem 0rem 0rem 0rem;
+    margin: 4rem 0rem 0rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +81,7 @@ opacity: 0.5;
 
 
 .outer-left,.outer-right{
-    background-color: #f9f9f9;
+    background-color: #f8f5f5;
     height: 25rem;
     width: 50rem;
     display: flex;
@@ -139,7 +138,7 @@ opacity: 0.5;
     font-family: 'Mukta', sans-serif;
 }
 
-span{
+.centerspan{
     color: white;
     font-size: 2.2rem;
     text-shadow: 0.5rem 0.4rem 0.8rem black;
@@ -171,10 +170,10 @@ display: none;
     
 }
 
-.progessBar{
+#progessBar{
     background-color: green;
     border-radius: 1rem;
-    width: 100%;
+    width: 0%;
     height: 100%;
     transform-origin: left;
     transition: width 0.35s linear;
@@ -207,6 +206,10 @@ display: none;
     text-align: center;
     font-weight: 600;
 }
+
+
+
+
 
 
 /* main body end */
@@ -332,7 +335,13 @@ margin-right: 0.5rem;
 
 @media(max-width:768px)
 {
-    .main-body-container::before{
+
+    body{
+        background: url(../images/bodybackground1.jpg);
+    background-repeat: no-repeat;
+}
+    
+    /* .main-body-container::before{
         content: "";
         position: absolute;
         left: 0;
@@ -341,10 +350,78 @@ margin-right: 0.5rem;
         height: 100%;
         width: 100%;
         z-index: -1;
+        } */
+
+        /* main left right conatiners start */
+
+        .main-body-conatiner-left-right {
+            /* border: 1px solid black; */
+            width: auto;
+            margin: 4rem 0rem 0rem 0rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer-left, .outer-right {
+            background-color: #f8f5f5;
+            height: 25rem;
+            width: 34rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .file-photo {
+            height: 10rem;
+            width: 7rem;
+            position: absolute;
+            left: 11rem;
+            transition: transform 500ms ease;
+        }
+
+        .rowContent {
+            width: 30rem;
+            height: 5rem;
+            line-height: 5rem;
+            margin: 0rem;
+            padding: 0rem;
+            border-radius: 1rem;
+            background-color: #eeeffe;
+        }
+
+        .link-excess-text {
+            width: 16rem;
         }
 
 
+        /* main left right conatiners end */
+
+
         /*email container  */
+
+        .same-email-inner {
+    display: inline-block;
+    width: 32rem;
+    height: 4.3rem;
+    line-height: 4rem;
+    margin: 0rem;
+    padding: 0rem;
+    border-radius: 1rem;
+    background-color: #eeeffe;
+}
+
+.email-excess-text {
+    margin-left: 0.5rem;
+    width: 15rem;
+    height: 3rem;
+    border: none;
+    border-bottom: 0.2rem ridge;
+    background-color: #eeeffe;
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    outline: none;
+}
         .img-email{
             text-align: center;
             width: 10rem;
@@ -352,22 +429,61 @@ margin-right: 0.5rem;
             margin: auto;
             }
 
-            .receiver-email{
-                display: flex;
-                width: 45rem;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                
-            }
-
             .sender-email {
                 margin-left: 0rem;
             }
 
-            /* .email-main-container{
+            #emailForm{
+                height: 25rem;
+                width: 34rem;
+                flex-direction: column;
+                margin: 0rem 0rem 5rem 0rem;
+            }
 
-            } */
+            .receiver-email {
+                width: 33rem;
+                
+            }
+
+            .send-email-btn{
+                display: inline-block;
+    width: 32rem;
+    /* margin-left: auto; */
+    margin: 2rem 0rem 0rem 0rem;
+            }
+
+            .email-main-container{
+                margin: 0rem 0rem 0rem 0rem;
+            }
+
+        
+
+
+
+            /* main headings */
+            .centerheading1 {
+                display: inline-block;
+                margin: 1.5rem 0rem 0rem 0rem;
+                font-family: 'Catamaran', sans-serif;
+                font-size: 4rem;
+                color: #fdfeff;
+                text-shadow: 0.4rem 0.1rem 0.5rem #665f5f;
+            }
+
+            .centerheading1span{
+                display: inline;
+                margin: 0rem;
+                color: #227bba;
+                text-shadow: none;
+            
+            }
+
+            .centerheading2 {
+                font-size: 2.5rem;
+                margin: 0.5rem 0rem 0rem 0rem;
+                
+
+            }
 
 
 }

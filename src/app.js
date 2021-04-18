@@ -47,8 +47,9 @@ app.get('',(req,res)=>{
   return res.render('index');
 })
 app.use('/api/files',require('../routes/files'));
-app.use('' , require('../routes/show'))
-app.use('/downloads' , require('../routes/downloadsRouteFile'))
+app.use('/downloads' , require('../routes/downloadsRouteFile'));
+app.use('/rateus',require('../routes/rateus'));
+app.use('' , require('../routes/show'));
 
 
 

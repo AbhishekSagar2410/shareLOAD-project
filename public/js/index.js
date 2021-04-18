@@ -4,12 +4,13 @@
 
 let dropZone = document.getElementById('dropZone');
 let innerDiv = document.getElementById('innerDiv');
-let browseBtn = document.getElementById('browseBtn');
+let outerEmailContainer=document.getElementById('outerEmailContainer');
+
 
 
 let host= "https://shareload-project.herokuapp.com";
 let uploadURL= `${host}/api/files`;
-// let emailURL=;
+let emailURL= `${host}/api/files/send` ;
 
 
 //dragover event listener
@@ -70,10 +71,10 @@ function uploadFile() {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
         console.log(xhr.readyState);
-        // if (xhr.readyState == XMLHttpRequest.DONE) {
-        //     console.log(xhr.response);
-        //      showLink(JSON.parse(xhr.response));
-        // }
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            
+             showLink(JSON.parse(xhr.response));
+        }
     }
 
 xhr.upload.onprogress=uploadProgressFun;
@@ -82,7 +83,7 @@ xhr.upload.onprogress=uploadProgressFun;
     xhr.send(formData);
 }
 
-
+let browseBtn = document.getElementById('browseBtn');
 //browse file
 browseBtn.addEventListener('click', () => {
     fileInput.click();
@@ -93,10 +94,15 @@ browseBtn.addEventListener('click', () => {
 //progress bar
 
 let progessBar=document.getElementById('progessBar');
+let percentageNum=document.getElementById('percentageNum');
+
 function uploadProgressFun(e){
-    const percentage= MAth.round((e.loaded/e.total)*100);
-    progessBar.style.width=`${percentage}`;
-    console.log(e);
+    const percentage= Math.round((e.loaded/e.total)*100);
+    progessBar.style.width=`${percentage}%`;
+    percentageNum.innerText=`${percentage}%`
+    if(percentage>=90){
+        outerEmailContainer.style.display='block';
+    }
 }
 
 //show link and show link 
@@ -107,7 +113,7 @@ function showLink(link)
     fileURL.value=link.file;
 
 }
-console.log(fileURL.value);
+
 // copy link icon
 let copyIcon=document.getElementById('copyIcon');
 copyIcon.addEventListener('click',()=>{
@@ -125,20 +131,30 @@ emailForm.addEventListener('submit' ,(e)=>{
     const sendformData={
 
         uuid: (fileURL.value).split('/').splice(-1,1)[0],
-        sender: emailForm.elements["senderEmail"].value,
-        reciever: emailForm.elements["receiverEmail"].value
+        emailTo: emailForm.elements["receiverEmail"].value,
+        emailFrom: emailForm.elements["senderEmail"].value
     }
 
-    console.log(sendformData.uuid);
+
+    console.log(sendformData);
 
     fetch(emailURL,{
         method:"POST",
         headers:{
-            "Content-Type": application/json 
+            "Content-Type": "application/json" 
         },
         body: JSON.stringify(sendformData)
     }).then(res=>res.json()).then((data)=>{
-        console.log('Success');
+
+        console.log(data);
     })
 
 })
+
+let ratebar=document.getElementById('ratebar');
+let rateusform=document.getElementById('rateusform');
+
+rateusform.addEventListener('submit' ,()=>{
+    console.log(ratebar.value)
+})
+

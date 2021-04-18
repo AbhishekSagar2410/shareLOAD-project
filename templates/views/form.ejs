@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c69650964.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800&family=Dela+Gothic+One&family=Fredoka+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <title>ShareLoad</title>
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <div class="container-fluid nav-container">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f8f5f5;">
+                    <div class="container-fluid">
+                        <div>
+                            <i class="fas fa-voicemail favicon"></i>
+                            <a class="navbar-brand shareload-text" href="/">ShareLOAD</a>
+                        </div>
+
+                        <div class="rate-us-div">
+                            <a href="/rateus/open">
+                                <button class="btn btn-outline-success rate-us-text-button">Rate Us</button>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+           
+            <div class="col-md-10 col-12 mx-auto" id="alertDivOuter">
+                <div class=" alert alert-warning alert-dismissible fade" id="alertDivinner" role="alert">
+                    <strong id="startMsg"></strong>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <!-- #227bba -->
+    <!-- navbar end -->
+
+    
+    <!-- main body start -->
+
+    <div class="container-fluid main-body-container">
+
+        <div class="row">
+
+            <div class="col-md-10 col-12 mx-auto ">
+                <div class="row ">
+
+                    <div class="col-md-8 col-12 main-body-conatiner-left-right mx-auto">
+
+                        <h2 class="centerheading1">Enjoying the App ?</h2>
+                        <p class="centerheading1para">
+                            Rate your experience using ShareLOAD so far.
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-8 col-12 main-body-conatiner-left-right left-main-body mx-auto">
+                        <div class="container-fluid outer-left" id="dropZone">
+                            <div class="inner-left" id="innerDiv">
+                                <h1 class="formheading">Rate our services <i class="fas fa-check-double"></i></i></h1>
+                                
+                                <form action="" class="rateusform" id="rateusformID">
+                                    <div class="formcontainer-outer">
+                                        <label for="name" class="form-label">Name</label>
+                                        <div class="formcontainer-inner">
+
+                                            <input type="text" class="form-inputs" id="inputUsername" required>
+                                        </div>
+                                    </div>
+                                    <div class="formcontainer-outer">
+                                        <label for="name" class="form-label">Email</label>
+                                        <div class="formcontainer-inner">
+
+                                            <input type="email" class="form-inputs" id="inputEmail" required>
+                                        </div>
+                                    </div>
+                                    <div class="formcontainer-outer">
+                                        <label for="name" class="form-label">Rate</label>
+                                        <div class="formcontainer-inner">
+                                            <input type="range" min="0" max="3" step="1" class="form-inputs" id="ratebar">
+                                        </div>
+                                    </div>
+                                    <div class="formcontainer-outer">
+                                        <span>&#128542</span>
+                                        <span>&#128524</span>
+                                        <span>&#128522</span>
+                                        <span>&#128525</span>
+                                        
+                                    </div>
+
+                                    <div class="formcontainer-outer submit-div">
+                                        <a href="/rateus/check">
+                                            <button class="btn btn-primary rate-submitBtn" type="submit">Rate Now</button>
+                                        </a>
+                                      </div>
+                                </form>
+
+
+                            </div>
+
+                            <div class="visitorDiv">
+                                <span id="visitorCount">
+                                    Visitors Count | <%= countUser %>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main body end -->
+
+    <!-- email container start -->
+
+
+
+    <!-- email container end -->
+    <!-- footer container start -->
+
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+
+        <div class="row footerrow">
+
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8 text-center p-3 footerDiv">
+                © 2020 Copyright:
+                <span class="text-dark">ShareLOAD</span>
+            </div>
+            <div class="col-md-2">
+
+                <span class="connectspan">
+                    <a href="https://www.instagram.com/l_mr_ocean_l/" target="_blank"><i
+                            class="fab fa-instagram myconnecticon"></i></a>
+                    <a href="https://www.facebook.com/abhishek.sagar.50364/" target="_blank"><i
+                            class="fab fa-facebook-f myconnecticon"></i></a>
+                    <a href="https://twitter.com/Mr_OceanAbhi" target="_blank"><i
+                            class="fab fa-twitter myconnecticon"></i></a>
+
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+    </footer>
+    <!-- footer container end -->
+    <script src="/js/form.js"></script>
+    <script src="/js/jquery-3.5.1.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

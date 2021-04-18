@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap" rel="stylesheet">
@@ -14,38 +16,35 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c69650964.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800&family=Dela+Gothic+One&family=Fredoka+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
     <title>ShareLoad</title>
 </head>
 
 <body>
 
     <!-- navbar start -->
-    <div class="container-fluid nav-container">
-        <div class="row">
-            <div class="col-md-10 col-12 mx-auto">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand shareload-text" href="/">ShareLOAD</a>
+    <%- include('../partials/navbar') %>
 
-                        <div class="rate-us-div">
-                            <button class="btn btn-outline-success rate-us-text-button">Rate Us</button>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-
+    <!-- #227bba -->
     <!-- navbar end -->
-
-    <h2 class="text-center">Upload & Share </h2>
     <!-- main body start -->
 
     <div class="container-fluid main-body-container">
+
         <div class="row">
+
             <div class="col-md-10 col-12 mx-auto ">
                 <div class="row ">
+                    <h2 class=" centerheading1">Free Cloud - <p class="centerheading1 centerheading1span">Based Reliable
+                        </p>
+                    </h2>
+                    <h2 class=" centerheading1 centerheading2">File Transfer </h2>
                     <div class="col-md-6 col-12 main-body-conatiner-left-right left-main-body mx-auto">
+
                         <div class="container-fluid outer-left" id="dropZone">
                             <div class="inner-left" id="innerDiv">
                                 <div class="file-photo-div">
@@ -54,7 +53,8 @@
                                     <img src="images/filephoto.svg" class="file-photo right-file-photo" alt="">
                                 </div>
                                 <input type="file" id="fileInput">
-                                <p class="file-photo-text">Drop your File here or, <span id="browseBtn">Browse</span>
+                                <p class="file-photo-text">Drop your File here or, 
+                                    <span class="centerspan" id="browseBtn">Browse</span>
                                 </p>
                             </div>
                         </div>
@@ -62,15 +62,17 @@
 
 
                     <div class="col-md-6 col-12 main-body-conatiner-left-right right-main-body mx-auto">
+                  
                         <div class="container-fluid outer-right">
                             <div class="inner-right row">
                                 <div class="rowContent expireDiv text-center">
                                     Link expires in 24hrs
                                 </div>
                                 <div class="rowContent progressContainer">
-                                    <div class="progessBar text-center">
-                                        <span class="percentageText">Uplaoding. . .<span class="percentageNum">
-                                                100%
+                                    <div class="text-center" id="progessBar">
+                                        <span class="centerspan percentageText">Uplaoding. . . <span class="centerspan"
+                                                id="percentageNum">
+                                                0%
                                     </div>
 
                                 </div>
@@ -78,14 +80,13 @@
                                     <div class="getLinkText">
                                         Get Link :
                                     </div>
-                                    <input class="link-excess-text" readonly id="fileURL"
-                                        value="https://www.youtube.com/watch?v=CwnViYV4gM0&t=5773s">
+                                    <input class="link-excess-text" readonly id="fileURL">
                                     </input>
                                     <i class="fas fa-copy" id="copyIcon">
 
                                     </i>
                                 </div>
-                            </div>
+                            </div> 
 
                         </div>
                     </div>
@@ -96,13 +97,11 @@
     <!-- main body end -->
 
     <!-- email container start -->
-    <div class="container-fluid nav-container">
+    <div class="container-fluid nav-container email-main-container" style="display: none;" id="outerEmailContainer">
         <div class="row ">
             <div class="col-md-11 col-12 mx-auto">
 
                 <form action="" class="row" id="emailForm">
-
-
                     <div class="col-md-4 col-12 same-email sender-email">
                         <div class=" same-email-inner">
                             <div class=" same-email-name">Your Email :
@@ -138,6 +137,37 @@
 
 
     <!-- email container end -->
+    <!-- footer container start -->
+
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+
+        <div class="row footerrow">
+
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8 text-center p-3 footerDiv">
+                © 2020 Copyright:
+                <span class="text-dark">ShareLOAD</span>
+            </div>
+            <div class="col-md-2">
+
+                <span class="connectspan">
+                    <a href="https://www.instagram.com/l_mr_ocean_l/" target="_blank"><i
+                            class="fab fa-instagram myconnecticon"></i></a>
+                    <a href="https://www.facebook.com/abhishek.sagar.50364/" target="_blank"><i
+                            class="fab fa-facebook-f myconnecticon"></i></a>
+                    <a href="https://twitter.com/Mr_OceanAbhi" target="_blank"><i
+                            class="fab fa-twitter myconnecticon"></i></a>
+
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+    </footer>
+    <!-- footer container end -->
 
 
     <script src="js/index.js"></script>

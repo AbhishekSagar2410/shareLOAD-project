@@ -1,0 +1,61 @@
+/* default */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'DM Serif Display', serif; */
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+:root{
+    --main-bg:#3c3547;
+    --main-color:white;
+
+}
+html
+{
+    font-size: 62.5%;
+}
+
+footer{
+    
+    width: 100%;
+    margin-top: auto;
+      background-color: var(--main-bg);
+      color: white;
+  }
+
+  .footerrow{
+    width: 100vw;
+    margin: 0rem;
+  }
+  
+  .footerDiv{
+      font-size: 1.5rem;
+      background-color: #cddde5;
+  
+      
+  }
+  
+  .myconnecticon{
+      color: black;
+      font-size: 2.3rem;
+      margin: 1.2rem 0rem 0rem 5rem;
+  }
+  
+  .connectspan{
+      margin-left: auto;
+  }
+
+  .text-dark{
+      font-weight: 600;
+  }
+
+/* .footer-right, .footer-left{
+    padding: 0rem;
+} */
